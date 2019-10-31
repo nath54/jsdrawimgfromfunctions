@@ -18,8 +18,8 @@ function createImage(){
             c1=z/255;
             c2=0;
             c3=0;
-            fenetre.fillStyle="rgb("+c1+","+c2+","+c3+")";
-            fenetre.fillRect(x,y,1,1);
+            ctx.fillStyle="rgb("+c1+","+c2+","+c3+")";
+            ctx.fillRect(x,y,1,1);
         }
     }
     to_image();
