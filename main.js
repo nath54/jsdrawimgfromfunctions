@@ -6,23 +6,28 @@ var tey=parseInt(canvas.height);
 
 function to_image(){
     var canvas = document.getElementById("canvas");
-    document.getElementById("theimage").src = canvas.toDataURL();
+    //document.getElementById("theimage").src = canvas.toDataURL();
     Canvas2Image.saveAsPNG(canvas,tex,tey);
 }
 
 
 function createImage(){
-    for(x=0;x<tex;x++){
-        for(y=0;y<tey;y++){
+    document.getElementById("t1").innerHTML="Creation de l'image en cour...";
+    alert("Création de l'image en cour...");
+    for(xx=0;xx<tex;xx++){
+        for(yy=0;yy<tey;yy++){
+            x=xx*10.0
+            y=yy*10.0
             z=eval( document.getElementById("f").value);
             c1=z/255;
             c2=0;
             c3=0;
             ctx.fillStyle="rgb("+c1+","+c2+","+c3+")";
-            ctx.fillRect(x,y,1,1);
+            ctx.fillRect(xx,yy,1,1);
         }
     }
     to_image();
+    document.getElementById("t1").innerHTML="L'image est finie...";
 }
 
 
