@@ -18,7 +18,12 @@ function createImage(){
         for(yy=0;yy<tey;yy++){
             x=xx*10.0
             y=yy*10.0
-            z=eval( document.getElementById("f").value);
+            try{
+                z=eval( document.getElementById("f").value);
+            }
+            catch{
+                z=0
+            }
             c1=z/255;
             c2=0;
             c3=0;
